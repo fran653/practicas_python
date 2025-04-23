@@ -1,0 +1,551 @@
+[33mcommit 81b48e9aa0eaf6d1394a24787f80560232be8a2d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Topot <fran653@hotmail.com>
+Date:   Tue Apr 22 21:28:22 2025 +0200
+
+    5
+
+[1mdiff --git a/practicas_python.ipynb b/practicas_python.ipynb[m
+[1mindex d88165d..615dcfd 100644[m
+[1m--- a/practicas_python.ipynb[m
+[1m+++ b/practicas_python.ipynb[m
+[36m@@ -722,12 +722,391 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[32m+[m[32m   "execution_count": 9,[m
+    "metadata": {},[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "[1, 4, 9, 16, 25]\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "numeros = [1,2,3,4,5] #ahora lo intento con función Lambda\n",[m
+[32m+[m[32m    "resultado = list(map(lambda x: x**2, numeros))\n",[m
+[32m+[m[32m    "print(resultado)"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 19,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "La palabra buscada existe! Quién lo diría?\n",[m
+[32m+[m[32m      "pollón\n",[m
+[32m+[m[32m      "la palabra empieza en 143 y termina en 149\n",[m
+[32m+[m[32m      "3\n",[m
+[32m+[m[32m      "Tengo un gran problema desde que nací\n",[m
+[32m+[m[32m      "Y siempre lo llevo muy dentro de mí\n",[m
+[32m+[m[32m      "Es algo que abulta y que pesa un montón\n",[m
+[32m+[m[32m      "Es lo que se suele llamar un pollónnnnnnnnnnnnnnnnnnnn\n",[m
+[32m+[m[32m      "Deepthroat es lo que quiero\n",[m
+[32m+[m[32m      "Amor a un pollónnnnnnnnnnnnnnnnnnnn soltero\n",[m
+[32m+[m[32m      "[Puente]\n",[m
+[32m+[m[32m      "Amor a un pollónnnnnnnnnnnnnnnnnnnn soltero\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "import re\n",[m
+[32m+[m[32m    "pattern = 'pollón'\n",[m
+[32m+[m[32m    "text = '''Tengo un gran problema desde que nací\n",[m
+[32m+[m[32m    "Y siempre lo llevo muy dentro de mí\n",[m
+[32m+[m[32m    "Es algo que abulta y que pesa un montón\n",[m
+[32m+[m[32m    "Es lo que se suele llamar un pollón\n",[m
+[32m+[m[32m    "Deepthroat es lo que quiero\n",[m
+[32m+[m[32m    "Amor a un pollón soltero\n",[m
+[32m+[m[32m    "[Puente]\n",[m
+[32m+[m[32m    "Amor a un pollón soltero'''\n",[m
+[32m+[m[32m    "result = re.search(pattern, text)\n",[m
+[32m+[m[32m    "if result:\n",[m
+[32m+[m[32m    "    print('La palabra buscada existe! Quién lo diría?')\n",[m
+[32m+[m[32m    "else:\n",[m
+[32m+[m[32m    "    print('No existe la palabra buscada, pero no pasa nada')\n",[m
+[32m+[m[32m    "print(result.group())\n",[m
+[32m+[m[32m    "#print('está en la posición:' + str(result.start())+ ' hasta ' + str(result.end()))\n",[m
+[32m+[m[32m    "print(f'la palabra empieza en {result.start()} y termina en {result.end()}')\n",[m
+[32m+[m[32m    "matches = re.findall(pattern, text)\n",[m
+[32m+[m[32m    "print(len(matches))\n",[m
+[32m+[m[32m    "nuevo_texto = re.sub(pattern, 'pollónnnnnnnnnnnnnnnnnnnn', text, flags=re.IGNORECASE)\n",[m
+[32m+[m[32m    "print(nuevo_texto)\n"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 27,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '\\n', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '\\t']\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+    "source": [[m
+[31m-    "numeros = [1,2,3,4,5]\n"[m
+[32m+[m[32m    "texto = 'Libre, como aquel que huele a 1 cuero \\n yo soy libre, y vengo del mar\\t'\n",[m
+[32m+[m[32m    "import re\n",[m
+[32m+[m[32m    "pattern = r'\\s'\n",[m
+[32m+[m[32m    "found = re.findall(pattern, texto)\n",[m
+[32m+[m[32m    "print(found)"[m
+    ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 41,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "['dddd', 'aaa', '5532', 'ccc', 'bb', 'aa', 'casa']\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "text = 'dddd aaa 5532ccc a bb aa casa'\n",[m
+[32m+[m[32m    "import re\n",[m
+[32m+[m[32m    "pattern = r'\\w{2,4}'\n",[m
+[32m+[m[32m    "matches = re.findall(pattern,text)\n",[m
+[32m+[m[32m    "print(matches)"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 1,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "***función sumar ***\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      " El resultado es, pedazo comepollas: 13\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "print('***función sumar ***')\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "def sumar (a,b):\n",[m
+[32m+[m[32m    "    resultado_suma = a + b\n",[m
+[32m+[m[32m    "    return resultado_suma\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "resultado_funcion = sumar(8,5)\n",[m
+[32m+[m[32m    "print(f' El resultado es, pedazo comepollas: {resultado_funcion}')"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 37,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "**GRRR**_Genérico_\n",[m
+[32m+[m[32m      "marramamiaumiaumiau\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "class Animal:\n",[m
+[32m+[m[32m    "    def comer(self):\n",[m
+[32m+[m[32m    "        print ('ñam ñam')\n",[m
+[32m+[m[32m    "    def dormir(self):\n",[m
+[32m+[m[32m    "        print ('zzZZzzZZ')\n",[m
+[32m+[m[32m    "    def sonido(self):\n",[m
+[32m+[m[32m    "        print('**GRRR**_Genérico_')\n",[m
+[32m+[m[32m    "class Perro(Animal):\n",[m
+[32m+[m[32m    "    def ladrar(self):\n",[m
+[32m+[m[32m    "        print ('guau guau BANG! argh..')\n",[m
+[32m+[m[32m    "    def dormir(self):\n",[m
+[32m+[m[32m    "        print('duermo como un PUTO perro cabrón')\n",[m
+[32m+[m[32m    "class Gato(Animal):\n",[m
+[32m+[m[32m    "    def sonido(self):\n",[m
+[32m+[m[32m    "        print('marramamiaumiaumiau')\n",[m
+[32m+[m[32m    "perro1 = Perro()\n",[m
+[32m+[m[32m    "gato1= Gato()\n",[m
+[32m+[m[32m    "#gato1.dormir()\n",[m
+[32m+[m[32m    "#gato1.sonido()\n",[m
+[32m+[m[32m    "#perro1.dormir()\n",[m
+[32m+[m[32m    "#perro1.sonido()\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "# Función polimórfica... ahí va el engendro! (Duck typing)\n",[m
+[32m+[m[32m    "def sonido_monstruoso(bestia): #el parámetro de entrada es el objeto que determinará el comportamiento\n",[m
+[32m+[m[32m    "    bestia.sonido()\n",[m
+[32m+[m[32m    "monstruo1 = Animal()\n",[m
+[32m+[m[32m    "sonido_monstruoso(monstruo1)\n",[m
+[32m+[m[32m    "sonido_monstruoso(gato1)    \n"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 24,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "Persona:\n",[m
+[32m+[m[32m      "        nombre = Topot\n",[m
+[32m+[m[32m      "        apellido = Sama \n",[m
+[32m+[m[32m      "        dir_memo = <__main__.Persona object at 0x000001D8354B6270>\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "class Persona(object): #no es necesario, pero pongo de manera explícita que heredo de la clase padre de todos los padres\n",[m
+[32m+[m[32m    "    def __init__(self, nombre, apellido):\n",[m
+[32m+[m[32m    "        self.nombre= nombre\n",[m
+[32m+[m[32m    "        self.apellido =apellido\n",[m
+[32m+[m[32m    "    def __str__(self): #por defecto, escribe dirección de memoria, vamos a cambiarlo\n",[m
+[32m+[m[32m    "        return f'''Persona:\n",[m
+[32m+[m[32m    "        nombre = {self.nombre}\n",[m
+[32m+[m[32m    "        apellido = {self.apellido} \n",[m
+[32m+[m[32m    "        dir_memo = {super.__str__(self)}''' #aquí uso el STR de OBJECT, porque la palabra especial SUPER llama a lo anterior a la sobreescritura de ese método\n",[m
+[32m+[m[32m    "    \n",[m
+[32m+[m[32m    "persona1 = Persona('Topot', 'Sama')\n",[m
+[32m+[m[32m    "print(persona1)\n",[m
+[32m+[m[32m    "#print(persona1.__str__()) #así se llamaría de forma explícita, aunque no es necesario\n",[m
+[32m+[m[32m    "#persona1.__str__() #curioso que emprime el texto y las variables\n",[m
+[32m+[m[32m    "    "[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 57,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "Orden número: 1\n",[m
+[32m+[m[32m      "        Computadoras: \n",[m
+[32m+[m[32m      "POLLOMETRO: 1\n",[m
+[32m+[m[32m      "        Monitor: Id: 1, Marca HijoPuta,Tamaño: 15\n",[m
+[32m+[m[32m      "        Teclado: Id: 1, Marca HP, Tipo Entrada: Ortoconectado\n",[m
+[32m+[m[32m      "        Raton: Id: 1, Marca: HP, Tipo Entrada: USB\n",[m
+[32m+[m[32m      "PisaPapelez: 2\n",[m
+[32m+[m[32m      "        Monitor: Id: 2, Marca Dell,Tamaño: 27\n",[m
+[32m+[m[32m      "        Teclado: Id: 2, Marca Razer, Tipo Entrada: BlueTooth\n",[m
+[32m+[m[32m      "        Raton: Id: 2, Marca: Logitech, Tipo Entrada: cable\n",[m
+[32m+[m[32m      "Niño RICO y gordo: 3\n",[m
+[32m+[m[32m      "        Monitor: Id: 3, Marca Apple,Tamaño: 40\n",[m
+[32m+[m[32m      "        Teclado: Id: 3, Marca Razer, Tipo Entrada: Firewire\n",[m
+[32m+[m[32m      "        Raton: Id: 3, Marca: Razer, Tipo Entrada: Wifi\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "class Dispositivo_entrada:\n",[m
+[32m+[m[32m    "    def __init__(self, marca, tipo_entrada):\n",[m
+[32m+[m[32m    "        self.marca = marca\n",[m
+[32m+[m[32m    "        self.tipo_entrada=tipo_entrada\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "class Raton(Dispositivo_entrada):\n",[m
+[32m+[m[32m    "    contador_ratones = 0\n",[m
+[32m+[m[32m    "    def __init__(self, marca, tipo_entrada):\n",[m
+[32m+[m[32m    "        Raton.contador_ratones += 1\n",[m
+[32m+[m[32m    "        self.id_raton = Raton.contador_ratones\n",[m
+[32m+[m[32m    "        super().__init__(marca, tipo_entrada)\n",[m
+[32m+[m[32m    "        \n",[m
+[32m+[m[32m    "    def __str__(self):\n",[m
+[32m+[m[32m    "        return(f'Id: {self.id_raton}, Marca: {self.marca}, '\n",[m
+[32m+[m[32m    "               f'Tipo Entrada: {self.tipo_entrada}')\n",[m
+[32m+[m[32m    "class Teclado(Dispositivo_entrada):\n",[m
+[32m+[m[32m    "    contador_teclados = 0\n",[m
+[32m+[m[32m    "    def __init__(self, marca, tipo_entrada):\n",[m
+[32m+[m[32m    "        Teclado.contador_teclados += 1\n",[m
+[32m+[m[32m    "        self.id_teclado = Teclado.contador_teclados\n",[m
+[32m+[m[32m    "        super().__init__(marca, tipo_entrada)    \n",[m
+[32m+[m[32m    "    def __str__(self):\n",[m
+[32m+[m[32m    "        return(f'Id: {self.id_teclado}, Marca {self.marca}, '\n",[m
+[32m+[m[32m    "               f'Tipo Entrada: {self.tipo_entrada}')\n",[m
+[32m+[m[32m    "        \n",[m
+[32m+[m[32m    "class Monitor:\n",[m
+[32m+[m[32m    "    contador_monitores = 0\n",[m
+[32m+[m[32m    "    def __init__(self, marca, tamanio):\n",[m
+[32m+[m[32m    "        Monitor.contador_monitores +=1\n",[m
+[32m+[m[32m    "        self.id_monitor = Monitor.contador_monitores\n",[m
+[32m+[m[32m    "        self.marca = marca\n",[m
+[32m+[m[32m    "        self.tamanio = tamanio \n",[m
+[32m+[m[32m    "    def __str__(self):\n",[m
+[32m+[m[32m    "       return (f'Id: {self.id_monitor}, Marca {self.marca},' \n",[m
+[32m+[m[32m    "               f'Tamaño: {self.tamanio}' )\n",[m
+[32m+[m[32m    "       \n",[m
+[32m+[m[32m    " #RELACIÓN DE AGREGACIÓN PAPÁ      \n",[m
+[32m+[m[32m    "class Computadora:\n",[m
+[32m+[m[32m    "    contador_computadoras = 0\n",[m
+[32m+[m[32m    "    def __init__(self, nombre, monitor, teclado, raton):\n",[m
+[32m+[m[32m    "        Computadora.contador_computadoras += 1\n",[m
+[32m+[m[32m    "        self.id_computadora = Computadora.contador_computadoras\n",[m
+[32m+[m[32m    "        self.nombre = nombre\n",[m
+[32m+[m[32m    "        self.monitor = monitor\n",[m
+[32m+[m[32m    "        self.teclado = teclado\n",[m
+[32m+[m[32m    "        self.raton = raton\n",[m
+[32m+[m[32m    "    def __str__(self):\n",[m
+[32m+[m[32m    "        return f'''{self.nombre}: {self.id_computadora}\n",[m
+[32m+[m[32m    "        Monitor: {self.monitor}\n",[m
+[32m+[m[32m    "        Teclado: {self.teclado}\n",[m
+[32m+[m[32m    "        Raton: {self.raton}'''\n",[m
+[32m+[m[32m    "        \n",[m
+[32m+[m[32m    "class Orden:\n",[m
+[32m+[m[32m    "    contador_ordenes = 0\n",[m
+[32m+[m[32m    "    def __init__(self, lista_computadoras):\n",[m
+[32m+[m[32m    "        Orden.contador_ordenes += 1\n",[m
+[32m+[m[32m    "        self.id_orden = Orden.contador_ordenes\n",[m
+[32m+[m[32m    "        self.computadoras = lista_computadoras\n",[m
+[32m+[m[32m    "    def agregar(self, computadora):\n",[m
+[32m+[m[32m    "        self.computadoras.append(computadora)\n",[m
+[32m+[m[32m    "    def __str__(self):\n",[m
+[32m+[m[32m    "        computadoras_str=''\n",[m
+[32m+[m[32m    "        for computadora in self.computadoras:\n",[m
+[32m+[m[32m    "            computadoras_str += '\\n' + computadora.__str__()\n",[m
+[32m+[m[32m    "        return f'''Orden número: {self.id_orden}\n",[m
+[32m+[m[32m    "        Computadoras: {computadoras_str}'''\n",[m
+[32m+[m[32m    "        \n",[m
+[32m+[m[32m    "raton1 = Raton('HP', 'USB')\n",[m
+[32m+[m[32m    "raton2 = Raton('Logitech', 'cable')\n",[m
+[32m+[m[32m    "teclado1 = Teclado('HP', 'Ortoconectado')\n",[m
+[32m+[m[32m    "teclado2 = Teclado('Razer', 'BlueTooth')\n",[m
+[32m+[m[32m    "monitor1 = Monitor('HijoPuta',15)\n",[m
+[32m+[m[32m    "monitor2 = Monitor('Dell',27)\n",[m
+[32m+[m[32m    "computadora1 = Computadora('POLLOMETRO', monitor1,teclado1,raton1)\n",[m
+[32m+[m[32m    "computadora2 = Computadora('PisaPapelez', monitor2,teclado2,raton2)\n",[m
+[32m+[m[32m    "lista_puta_y_doras = [computadora1, computadora2]\n",[m
+[32m+[m[32m    "orden1= Orden(lista_puta_y_doras)\n",[m
+[32m+[m[32m    "#print(orden1)\n",[m
+[32m+[m[32m    "raton3 =Raton('Razer', 'Wifi')\n",[m
+[32m+[m[32m    "teclado3 = Teclado('Razer', 'Firewire')\n",[m
+[32m+[m[32m    "monitor3 =Monitor('Apple', 40)\n",[m
+[32m+[m[32m    "computadora3 = Computadora('Niño RICO y gordo', monitor3,teclado3,raton3)\n",[m
+[32m+[m[32m    "orden1.agregar(computadora3)\n",[m
+[32m+[m[32m    "print(orden1)"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 1,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "La cagaste, has hecho: division by zero\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "try:\n",[m
+[32m+[m[32m    "    10/0\n",[m
+[32m+[m[32m    "except Exception as e: #Exception es clase padre de Division, cogerá ese objeto hijo\n",[m
+[32m+[m[32m    "    print(f'La cagaste, has hecho: {e}')"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 2,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "Pero cacho inutil, otra vez has hecho: division by zero\n",[m
+[32m+[m[32m      " El resultado es None\n",[m
+[32m+[m[32m      " porque la has cagado.\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "resultado = None #no es necesario, pero lo pongo para ver como no se asigna  el resultado a algo que da error\n",[m
+[32m+[m[32m    "a,b = 10,0\n",[m
+[32m+[m[32m    "try:\n",[m
+[32m+[m[32m    "    resultado = a/b\n",[m
+[32m+[m[32m    "except Exception as cagada:\n",[m
+[32m+[m[32m    "    print(f'Pero cacho inutil, otra vez has hecho: {cagada}')\n",[m
+[32m+[m[32m    "    \n",[m
+[32m+[m[32m    "print (f' El resultado es {resultado}')\n",[m
+[32m+[m[32m    "if resultado == None:\n",[m
+[32m+[m[32m    "    print(' porque la has cagado.')"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": null,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [],[m
+[32m+[m[32m   "source": [][m
+   }[m
+  ],[m
+  "metadata": {[m
+
+[33mcommit 533d5cab717afad1794f642f241ffbc261f5cc38[m
+Author: Topot <fran653@hotmail.com>
+Date:   Thu Apr 10 13:15:42 2025 +0100
+
+    3
+
+[1mdiff --git a/.vscode/settings.json b/.vscode/settings.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..934dc98[m
+[1m--- /dev/null[m
+[1m+++ b/.vscode/settings.json[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m    "python.testing.pytestArgs": [[m
+[32m+[m[32m        "pollardo"[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    "python.testing.unittestEnabled": true,[m
+[32m+[m[32m    "python.testing.pytestEnabled": false,[m
+[32m+[m[32m    "python.testing.unittestArgs": [[m
+[32m+[m[32m        "-v",[m
+[32m+[m[32m        "-s",[m
+[32m+[m[32m        "./pollardo",[m
+[32m+[m[32m        "-p",[m
+[32m+[m[32m        "*test.py"[m
+[32m+[m[32m    ][m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+
+[33mcommit e29b56c64348516184dc968bd661397b6893607a[m
+Author: Topot <fran653@hotmail.com>
+Date:   Thu Apr 10 12:55:52 2025 +0100
+
+    aaargh
+
+[1mdiff --git a/practicas_python.ipynb b/practicas_python.ipynb[m
+[1mindex e51ba7e..d88165d 100644[m
+[1m--- a/practicas_python.ipynb[m
+[1m+++ b/practicas_python.ipynb[m
+[36m@@ -578,7 +578,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 25,[m
+[32m+[m[32m   "execution_count": 16,[m
+    "metadata": {},[m
+    "outputs": [[m
+     {[m
+[36m@@ -594,6 +594,140 @@[m
+     "plana = [num for fila in matriz for num in fila]\n",[m
+     "print(plana)"[m
+    ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 14,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "['a', 'a', 'o', 'e', 'i', 'u', 'o', 'o', 'i', 'a', 'e', 'o', 'e', 'e', 'u', 'a', 'i', 'i', 'i', 'e', 'i']\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "cadena = \"AALorem ipsum dolor sit amet, consectetur adipiscing elit\"\n",[m
+[32m+[m[32m    "vocales = [ x for x in cadena.lower() if x in 'aeiou']\n",[m
+[32m+[m[32m    "print(vocales)"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 19,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "[32.0, 50.0, 68.0, 86.0, 104.0, 122.0]\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "celsious = [0, 10, 20, 30, 40, 50]\n",[m
+[32m+[m[32m    "fahrenheit = [(temp * 9/5)+32 for temp in celsious]\n",[m
+[32m+[m[32m    "print(fahrenheit)"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 29,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "[[1, 0, 0], [0, 1, 0], [0, 0, 1]]\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "matriz_identidad = [[1 if i == j else 0 for i in range (3)] for j in range (3)]\n",[m
+[32m+[m[32m    "print (matriz_identidad)"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 30,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "[1, 0, 0, 0, 0]\n",[m
+[32m+[m[32m      "[0, 1, 0, 0, 0]\n",[m
+[32m+[m[32m      "[0, 0, 1, 0, 0]\n",[m
+[32m+[m[32m      "[0, 0, 0, 1, 0]\n",[m
+[32m+[m[32m      "[0, 0, 0, 0, 1]\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "def matrix(x):\n",[m
+[32m+[m[32m    "    matriz_identidad = [[1 if i == j else 0 for i in range (x)] for j in range (x)]\n",[m
+[32m+[m[32m    "    for row in matriz_identidad:\n",[m
+[32m+[m[32m    "        print(row)\n",[m
+[32m+[m[32m    "matrix(5)\n"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 31,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "10\n",[m
+[32m+[m[32m      "10\n"[m
+[32m+[m[32m     ][m
