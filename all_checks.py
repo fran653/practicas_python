@@ -5,7 +5,7 @@ import sys
 
 def main():
     if check_reboot():
-        print("Pending Reboot.")
+        print("Pendding Reboot.")
         sys.exit(1)
 
     print("Everything ok.")
