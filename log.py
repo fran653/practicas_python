@@ -15,4 +15,4 @@ print(result[1])
 
 
 #chmod +x check_cron.py 
-#./check_cron.py syslog 
+#./check_cron.py syslog  esto se ejecuta en linux
