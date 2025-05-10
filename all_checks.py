@@ -1,3 +1,4 @@
+
 #!/usr/binenv python3
 #atom all_checks.py
 (...)
@@ -12,12 +13,24 @@ def check_disk_full(disk, min_gb, min_percent):
         return True
     return False
 
+#!/usr/bin/env python3
+  
+import os
+import sys
+def check_reboot():
+    pass
+
+
 def main(): 
     if check_reboot():
+
         print("Pending Reboot.")
         sys_exit(1)
     if check_disk_full(disk="/", min_gb=2, min_percent=10):
         print("Disk full.")
+
+        print("Pendding Reboot.")
+
         sys.exit(1)
     
     print("Everything ok")
