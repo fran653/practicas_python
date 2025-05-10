@@ -1,0 +1,7 @@
+advance your dick
+chop your balls
+go fuck yourself
+#!usr/bin/env python3
+import sys
+for line in sys.stdin:
+	print(line.strip().capitalize())
