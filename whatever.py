@@ -1,0 +1,2 @@
+import PIL
+help(PIL)
