@@ -1,3 +1,4 @@
 from PIL import Image
-with Image.open("hopper.jpg") as im:
-    im.rotate(45).show()
+im = Image.open("hopper.jpg")
+im.rotate(180).resize((640,480)).save("flipped_and_resized.jpg")
+
